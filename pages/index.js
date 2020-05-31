@@ -1,9 +1,19 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
+import request from "axios";
 import { getSortedPostsData } from "../lib/posts";
+import { useEffect } from "react";
 
 export default function Home({ allPostsData }) {
+  useEffect(() => {
+    init();
+    async function init() {
+      const { data } = await request.get("/api/user?doc=nleM06BVRxY7iOIiN3qV");
+      console.log(data);
+    }
+  }, []);
+
   return (
     <Layout home>
       <Head>
