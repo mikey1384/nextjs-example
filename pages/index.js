@@ -10,7 +10,6 @@ export default function Home({ allPostsData }) {
     init();
     async function init() {
       const { data } = await request.get("/api/user?doc=nleM06BVRxY7iOIiN3qV");
-      console.log(data);
     }
   }, []);
 
