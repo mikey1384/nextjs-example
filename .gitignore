@@ -31,3 +31,4 @@ yarn-error.log*
 
 #keys
 lumine-network-firebase.json
+next.config.js
